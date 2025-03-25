@@ -25,9 +25,11 @@ const senha = document.getElementById('inputsenha')
 
         const response = await fetch (url, options)
 
-        if(response == 200){
+        if(response.sucess == true){
+            
+        }else{
 
-        }else{}
+        }
 
     }
 }
