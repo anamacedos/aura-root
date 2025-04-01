@@ -26,9 +26,9 @@ const senha = document.getElementById('inputsenha')
         const response = await fetch (url, options)
 
         if(response.sucess == true){
-            
+            window.location.href = "html/home.html"
         }else{
-
+            alert("Houve algum problema")
         }
 
     }

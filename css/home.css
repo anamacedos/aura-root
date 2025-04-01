@@ -1,0 +1,68 @@
+/*reset*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #FFECF2;
+}
+
+/* configurações header */
+header{
+    display: flex;
+    align-items: center;
+}
+ #logo{
+    width: 20%;
+ }
+ #user{
+    width: 3%;
+    cursor: pointer;
+ }
+ input{
+    border: none;
+    outline: none;
+    width: 60%;
+    height: 40px;
+    padding-left: 2%;
+    border-radius: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+ }
+
+/* configuracoes main */
+main{
+    display: flex;
+}
+
+ /* configurações menu lateral */
+ #menulateral{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 2%;
+ }
+ .icons{
+    width: 30%;
+    padding-left: 30px;
+    cursor: pointer;
+
+ }
+ #settings{
+    padding-top: 20%;
+ }
+
+ /* configurações das imagens */
+ 
