@@ -1,6 +1,8 @@
 'use strict'
-const emailInput = document.getElementById('inputusuarioemail')
+const nomeInput = document.getElementById('inputnome')
+const emailInput = document.getElementById('inputemail')
 const senhaInput = document.getElementById('inputsenha')
+const palavraChaveInput = document.getElementById('inputpalavrachave')
 
 
 

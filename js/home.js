@@ -5,6 +5,7 @@ async function criarFoto(linkImagem) {
     const novaImagem = document.createElement('img')
     novaImagem.src = linkImagem
     divImagens.appendChild(novaImagem)
+    novaImagem.classList.add('imagem')
 }
 
 async function pesquisarImagens() {
