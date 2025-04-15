@@ -8,7 +8,7 @@ async function cadastrarUsuario() {
     const imagemPerfil = document.getElementById('inputfoto').value
     const checkPremium = document.getElementById('checkbox').checked
 
-    // Validação básica (opcional, mas recomendada)
+
     if (nome === "" || email === "" || senha === "" || senhaRecuperacao === "" || imagemPerfil === "") {
         alert("Por favor, preencha todos os campos.")
         return

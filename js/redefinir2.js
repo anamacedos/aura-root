@@ -1,13 +1,13 @@
 'use strict'
 
-// Pegando os dados do localStorage
+// pgnd os dados do localStorage
 const dados = JSON.parse(localStorage.getItem('dadosUsuario'))
 
 if (dados) {
     const nome = dados.nome
     document.getElementById('saudacao').textContent = `Olá ${nome}, digite sua nova senha.`
 } else {
-    // Se a pessoa tentar acessar direto sem passar pela primeira etapa
+    // Se a pessoa tentar ir direto p ela sem passar pela primeira tela, manda pra primeira tela
     window.location.href = "../html/redefinir1.html"
 }
 
