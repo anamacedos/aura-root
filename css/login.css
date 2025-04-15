@@ -111,7 +111,7 @@ main{
     gap: 10px;
     flex-direction: row;
     font-size: 13px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 #row2{
@@ -119,8 +119,14 @@ main{
     font-size: 13px;
     cursor: pointer;
     gap: 6px;
+    margin-bottom: 10px;
 }
 #element{
     color: #FF8FA4;
     font-weight: bold;
+}
+#redefinirsenha{
+    color: #FF8FA4;
+    font-weight: bold;
+    font-size: 13px;
 }

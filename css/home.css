@@ -23,11 +23,12 @@ header{
     align-items: center;
 }
  #logo{
-    width: 20%;
+    width: 10%;
  }
  #user{
-    width: 3%;
+    width: 2.5%;
     cursor: pointer;
+    margin-left: 15%;
  }
  input{
     border: none;
@@ -67,34 +68,28 @@ main{
 
  /* configurações das imagens */
  
-#imagens{
+/* #imagens{
     margin-left: 10%;
-    border: solid 1px red;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: 150px; /* altura padrão das linhas */
     gap: 10px;
-    grid-template-areas:
-    "item1 item2 item2 item3"
-    "item1 item4 item5 item3"
-    "item1 item6 item8 item8"
-    "item1 item7 item8 item8";
-    
+
 }
 .imagem{
-    /* border: solid 10px black; */
-    /* width: 100%; */
+
+} */
+
+#imagens {
+    column-count: 3; /* muda o # de colunas */
+    column-gap: 15px;
+    margin-left: 8%; 
+    padding: 20px;
 }
 
-#imagens:nth-child(1) {
-    grid-area: item3;
-    border: solid 10px black;
+.imagem {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: block;
+    break-inside: avoid; /* impede que uma imagem quebre entre colunas */
 }
 
-#imagens:nth-child(2) {
-    grid-area: item2;
-}
-
-#imagens:nth-child(3) {
-    grid-area: item3;
-}

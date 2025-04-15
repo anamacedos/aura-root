@@ -24,13 +24,16 @@ img{
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 footer{
     width: 100%;
     height: 10%;
 }
 #caixacinza{
-    height: 24vw;
+    height: 20vw;
     width: 62vh;
     display: flex;
     flex-direction: column;
@@ -46,9 +49,15 @@ footer{
     font-style: normal;
     color: rgb(99, 99, 99);
 }
-h1{
+h2{
     padding-top: 7%;
     font-weight: 430;
+}
+h1{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #FF8FA4;
 }
 
 input{
@@ -60,7 +69,7 @@ input{
     padding-left: 15px;
 }
 
-#inputEmail{
+#inputSenha{
     margin-top: 11%;
     margin-bottom: 3%;
 }
@@ -74,6 +83,6 @@ button{
     border: none;
     border-radius: 18px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 12%;
 }

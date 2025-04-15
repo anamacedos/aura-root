@@ -1,54 +1,44 @@
 'use strict'
-const nomeInput = document.getElementById('inputnome')
-const emailInput = document.getElementById('inputemail')
-const senhaInput = document.getElementById('inputsenha')
-const palavraChaveInput = document.getElementById('inputpalavrachave')
 
+async function cadastrarUsuario() {
+    const nome = document.getElementById('inputnome').value
+    const email = document.getElementById('inputemail').value
+    const senha = document.getElementById('inputsenha').value
+    const senhaRecuperacao = document.getElementById('inputpalavrachave').value
+    const imagemPerfil = document.getElementById('inputfoto').value
+    const checkPremium = document.getElementById('checkbox').checked
 
+    // Validação básica (opcional, mas recomendada)
+    if (nome === "" || email === "" || senha === "" || senhaRecuperacao === "" || imagemPerfil === "") {
+        alert("Por favor, preencha todos os campos.")
+        return
+    }
 
- async function validarLogin(){
+    const dadosUsuario = {
+        nome: nome,
+        email: email,
+        senha: senha,
+        premium: checkPremium ? "1" : "0",
+        imagemPerfil: imagemPerfil,
+        senhaRecuperacao: senhaRecuperacao
+    }
 
-    const email = emailInput.value 
-    const senha = senhaInput.value
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dadosUsuario)
+    }
 
-    console.log(email, senha);
-    
+    const response = await fetch("https://back-spider.vercel.app/user/cadastrarUser", options)
 
-
-    if (email == "" || email ==  undefined || senha == "" | senha == undefined){
-        alert("Por favor, verifique as credenciais")
-    }else{
-        const url = "https://back-spider.vercel.app/login"
-        const dados = {
-            email : email,
-            senha: senha
-        }
-
-       
-        
-        const options = {
-            method: 'POST',
-            headers: {
-                "content-type": "application/JSON"
-            },
-            body: JSON.stringify(dados)
-
-        }
-
-        const response = await fetch(url, options)
-
-        console.log(response);
-        
-
-        if(response.ok){
-            window.location.href = "../html/home.html"
-        }else{
-            alert("Houve algum problema")
-        }
-
+    if (response.ok) {
+        alert("Usuário cadastrado com sucesso!")
+        window.location.href = "../index.html"
+    } else {
+        alert("Erro ao cadastrar. Verifique os dados e tente novamente.")
     }
 }
 
-
-
-document.getElementById('buttonentrar').addEventListener('click', validarLogin)
+document.getElementById('button').addEventListener('click', cadastrarUsuario)
