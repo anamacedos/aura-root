@@ -1,6 +1,6 @@
 'use strict'
 
-async function criarFoto(linkImagem) {
+async function criarFoto(linkImagem,) {
     const divImagens = document.getElementById('imagens')
     const novaImagem = document.createElement('img')
     novaImagem.src = linkImagem

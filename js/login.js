@@ -39,7 +39,7 @@ const senhaInput = document.getElementById('inputsenha')
         
 
         if(response.ok){
-            window.location.href = "../home.html"
+            window.location.href = "./html/home.html"
         }else{
             alert("Houve algum problema")
         }
